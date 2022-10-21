@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /*
+      main color =  #087f5b
+      gray color =  #343a40  #ced4da #adb5bd
+         */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1.2;
+      }
+      .accordion {
+        width: 45%;
+        margin: 100px auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+      }
+      .item {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 30px;
+
+        padding: 25px;
+        box-shadow: 0 0 30px rgb(0, 0, 0, 0.15);
+      }
+
+      .text {
+        font-size: 24px;
+        font-weight: bold;
+        color: #343a40;
+      }
+
+      .number {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ced4da;
+      }
+
+      .icon {
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+        stroke: #087f5b;
+      }
+
+      .icon-hover :hover {
+        cursor: pointer;
+      }
+
+      .hidden-content {
+        grid-column: 2;
+        display: none;
+      }
+
+      .hidden-content p {
+        /* color: #343a40;  */
+        margin-bottom: 15px;
+      }
+      .hidden-content ul {
+        color: #adb5bd;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      /* OPEN STATE */
+
+      .open {
+        border-top: 5px solid #06674a;
+      }
+      .open .hidden-content {
+        display: block;
+      }
+
+      .open .number,
+      .open .text {
+        color: #087f5b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="accordion">
+      <div class="item open">
+        <p class="number">01</p>
+        <p class="text">Where are these chairs assembled?</p>
+        <div class="icon-hover">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
+        <div class="hidden-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque est
+            laboriosam ut aliquam vero asperiores officia sapiente quidem harum,
+            quibusdam consequuntur cum tenetur provident quasi animi quos
+            perferendis iure accusantium.
+          </p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <p class="number">02</p>
+        <p class="text">How long do I have to return my chair?</p>
+        <div class="icon-hover">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
+        <div class="hidden-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque est
+            laboriosam ut aliquam vero asperiores officia sapiente quidem harum,
+            quibusdam consequuntur cum tenetur provident quasi animi quos
+            perferendis iure accusantium.
+          </p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <p class="number">03</p>
+        <p class="text">Do you ship to countries outside the EU?</p>
+        <div class="icon-hover">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
+        <div class="hidden-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque est
+            laboriosam ut aliquam vero asperiores officia sapiente quidem harum,
+            quibusdam consequuntur cum tenetur provident quasi animi quos
+            perferendis iure accusantium.
+          </p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident dolore fugiat ad!?
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="scrpt.js"></script>
+  </body>
+</html>

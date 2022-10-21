@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /*
+            main color =  #087f5b
+            gray color =  #343a40  ##e6fcf5 #c3fae8
+               */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        color: #343a40;
+        font-family: "Inter", sans-serif;
+        line-height: 1.2;
+      }
+      .curousel {
+        background-color: #087f5b;
+        width: 800px;
+        padding: 30px 30px 30px 86px;
+        margin: 100px auto;
+
+        border-radius: 8px;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        gap: 80px;
+      }
+      img {
+        width: 200px;
+        border-radius: 8px;
+        transform: scale(1.5);
+        box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+      }
+
+      .testimonial-text {
+        color: #e6fcf5;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+      .testimonial-autor {
+        color: #c3fae8;
+        font-size: 14px;
+      }
+      .testimonial-job {
+        color: #c3fae8;
+        font-size: 12px;
+      }
+
+      /* controller */
+      .btn {
+        background-color: white;
+
+        border-radius: 50%;
+        border: none;
+        width: 40px;
+        height: 40px;
+
+        position: absolute;
+
+        cursor: pointer;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn-icon {
+        width: 25px;
+        height: 25px;
+        stroke: #087f5b;
+      }
+      .btn-left {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .btn-right {
+        right: 0;
+        bottom: 50%;
+        transform: translate(50%, 50%);
+      }
+
+      .dots {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+
+        display: flex;
+        align-items: center;
+        transform: translate(-50%, 32px);
+        gap: 12px;
+      }
+      .dot {
+        background-color: white;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      }
+      .dot-filled {
+        background-color: #087f5b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="curousel">
+      <img src="maria.jpg" alt="Maria de Almeida" />
+      <blockquote class="testimonial">
+        <p class="testimonial-text">
+          " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati
+          saepe vero itaque sed, sapiente, voluptas, sint ipsa unde alias soluta
+          libero architecto error quam?"
+        </p>
+        <p class="testimonial-autor">Maria de Almeida</p>
+        <p class="testimonial-job">Senior Product Manager at EDP Comercial</p>
+      </blockquote>
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot dot-filled">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+    <script src="scrpt.js"></script>
+  </body>
+</html>
