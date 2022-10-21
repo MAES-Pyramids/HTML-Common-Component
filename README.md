@@ -2,7 +2,7 @@
 
 
 ### All the previous components are hosted on Netlify so
-#### To access accordion-component press ----> [Here](https://html-accordion-component-maes.netlify.app/)
+#### To access accordion-component press ---> [Here](https://html-accordion-component-maes.netlify.app/)
 #### To access carousel-component press -----> [Here](https://html-carousel-component-maes.netlify.app/)
 #### To access table-component press ---------> [Here](https://html-table-component-maes.netlify.app/)
 #### To access pagination-component press --> [Here](https://html-pagination-component-maes.netlify.app/)
